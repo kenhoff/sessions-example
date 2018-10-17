@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<h1>Sessions demo</h1>
+<button id="sign-in" type="button" name="button">sign in</button>
+<button id="sign-out" type="button" name="button">sign out</button>
+<button id="api-request" type="button" name="button">make api request</button>
+
+<script type="text/javascript">
+    document.getElementById('sign-in').onclick = () => {
+        console.log("clicked");
+        axios.post("/sign-in")
+    }
+    document.getElementById('sign-out').onclick = () => {
+        console.log("clicked");
+        axios.post("/sign-out")
+    }
+    document.getElementById('api-request').onclick = () => {
+        console.log("clicked");
+        axios.get("/api-request")
+    }
+</script>
